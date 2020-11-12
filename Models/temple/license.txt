@@ -1,0 +1,11 @@
+Model Information:
+* title:	キーポイント : タイポイント = 40000 : 4000
+* source:	https://sketchfab.com/3d-models/40000-4000-36e53d30b0d949b7893f5886d3144913
+* author:	Kosuke Shinoda (https://sketchfab.com/Kosuke_3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "キーポイント : タイポイント = 40000 : 4000" (https://sketchfab.com/3d-models/40000-4000-36e53d30b0d949b7893f5886d3144913) by Kosuke Shinoda (https://sketchfab.com/Kosuke_3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

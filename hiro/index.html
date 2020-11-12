@@ -1,0 +1,78 @@
+<!doctype HTML>
+<html>
+
+<head>
+  <title>
+    10
+  </title>
+</head>
+
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script src="gestures.js"></script>
+
+<body style='margin : 0px; overflow: scroll;'>
+
+  <a-scene 
+  embedded 
+  arjs='patternRatio: 0.5'
+  renderer="logarithmicDepthBuffer: true;"
+  vr-mode-ui="enabled: false"
+  gesture-detector
+  id="scene"
+  >
+
+  <a-assets>
+    <a-asset-item id="head" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/LB31/LB31.github.io/master/Models/head/scene.gltf"></a-asset-item>
+    <a-asset-item id="sloth1" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/LB31/LB31.github.io/master/hiro/sloth1.png"></a-asset-item>
+  </a-assets>
+
+  <a-marker 
+  type='pattern' 
+  url='pattern-Funny-Sloth-Memes-16.patt'
+  raycaster="objects: .clickable"
+  emitevents="true"
+  cursor="fuse: false; rayOrigin: mouse;"
+  >
+      <a-text value="Hello, World!" rotation="-90 0 0" position="0 0 -0.5"></a-text>
+      <a-image src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/LB31/LB31.github.io/master/hiro/sloth1.png" rotation="0 0 0"></a-image>
+
+      <a-box position='0.4 0.5 0' material='color: red;' scale="0.5 1 0.4" 
+      class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" 
+      gesture-handler></a-box>
+      <a-sphere position="0 1.25 0.3" radius="0.25" color="#002D5E"
+      animation__mouseenter="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 500";
+      animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 500";
+      ></a-sphere>
+
+      <a-entity
+          id="updateMe" arjs-hit-testing="enabled: true" rotation="0 0 46.496098032661436"
+          position="-2.29277 0.18289 -0.07256"
+          scale="0.42471 0.42471 0.42471"
+          gltf-model="#head"
+          class="clickable"
+          gesture-handler
+        ></a-entity>
+
+    </a-marker>
+
+  <a-marker 
+  type='pattern' 
+  url='pattern-gentleSloth.patt'
+  raycaster="objects: .clickable"
+  emitevents="true"
+  cursor="fuse: false; rayOrigin: mouse;"
+  >
+
+  <a-box position='0.4 0.5 0' material='color: red;' scale="0.5 1 0.4" 
+      class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" 
+      gesture-handler></a-box>
+
+  </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+
+</body>
+
+</html>
