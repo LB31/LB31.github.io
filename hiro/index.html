@@ -46,9 +46,9 @@
       ></a-sphere>
 
       <a-entity
-          id="updateMe" arjs-hit-testing="enabled: true" rotation="0 0 46.496098032661436"
+          id="updateMe" arjs-hit-testing="enabled: true" rotation="-3.6262498853829803 -42.8538053290148 24.40055362123637"
           position="-2.29277 0.18289 -0.07256"
-          scale="0.42471 0.42471 0.42471"
+          scale="1 1 1"
           gltf-model="#head"
           class="clickable"
           gesture-handler
@@ -71,6 +71,10 @@
       <a-video src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/LB31/LB31.github.io/master/Videos/WebXR.mp4"></a-video>
 
   </a-marker>
+
+  <a-box position=0.4 0.5 0' material='color: red;' scale="0.5 1 0.4" 
+  class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" 
+  gesture-handler></a-box>
 
     <a-entity camera></a-entity>
   </a-scene>
