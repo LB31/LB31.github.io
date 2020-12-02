@@ -12,6 +12,9 @@
 <script src="gestures.js"></script>
 
 <body style='margin : 0px; overflow: scroll;'>
+<!-- patternRatio needs to be the same like the selected durin the marker creating 
+gesture-detector comes from gestures.js
+-->
 
   <a-scene 
   embedded 
@@ -21,7 +24,7 @@
   gesture-detector
   id="scene"
   >
-
+<!-- the long url is needed to return the raw files when hosting on GitHub. See https://raw.githack.com/ --> 
   <a-assets>
     <a-asset-item id="head" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/LB31/LB31.github.io/master/Models/head/scene.gltf"></a-asset-item>
     <a-asset-item id="sloth1" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/LB31/LB31.github.io/master/hiro/sloth1.png"></a-asset-item>
@@ -35,15 +38,10 @@
   cursor="fuse: false; rayOrigin: mouse;"
   >
       <a-text value="Hello, World!" rotation="-90 0 0" position="0 0 -0.5"></a-text>
-      <a-image src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/LB31/LB31.github.io/master/hiro/sloth1.png" rotation="0 0 0"></a-image>
-
       <a-box position='0.4 0.5 0' material='color: red;' scale="0.5 1 0.4" 
       class="clickable" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" 
       gesture-handler></a-box>
-      <a-sphere position="0 1.25 0.3" radius="0.25" color="#002D5E"
-      animation__mouseenter="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 500";
-      animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 500";
-      ></a-sphere>
+      <a-sphere position="0 1.25 0.3" radius="0.25" color="#002D5E"></a-sphere>
 
       <a-entity
           id="updateMe" arjs-hit-testing="enabled: true" rotation="-3.6262498853829803 -42.8538053290148 24.40055362123637"
